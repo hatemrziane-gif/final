@@ -1,0 +1,119 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Karla", sans-serif;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    background-color:hsl(204, 43%, 93%) ;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(2 ,300px) ;
+    grid-template-areas:"info info"
+                        "price why";
+    border-radius:8px;
+    box-shadow:0 10px 16px 0  rgb(194, 194, 194) ;
+    overflow: hidden;                    
+    
+}
+.info{
+    grid-area:info ;
+    background-color:white ;
+    padding:30px ;
+   
+   
+}
+.info h3{
+    color:hsl(179, 62%, 43%) ;
+    margin-bottom: 15px;
+    
+}
+.info h5{
+ color:hsl(71, 73%, 54%) ;
+ margin-bottom:10px;
+}
+.info p{
+    font-size: 15px;
+    color:hsl(218, 22%, 67%) ;
+    line-height:1.7;
+    font-weight: 500;
+}
+.price{
+    grid-area:price;
+    background-color: hsl(179, 62%, 43%) ;
+     padding:  35px ;
+    
+}
+.price h4{
+    color:white;
+    margin-bottom: 20px;
+   
+}
+.price .main-price{
+    display: flex;
+    align-items: center;
+    gap:12px ;
+    margin-bottom: 10px;
+}
+.price .main-price .p{
+    font-weight:700 ;
+    font-size:30px ;
+    color:white ;
+}
+
+.price .main-price .d{
+    text-align: center;
+    color:hsla(0, 0%, 100%, 0.461) ;
+}
+.price p{
+    font-size:15px; 
+    color:hsla(0, 0%, 100%, 0.769) ;
+    margin-bottom: 25px; 
+   
+}
+.price button{
+ width:100%;
+ padding:12px;
+ border:none;
+ border-radius:6px ;
+ color:white ;
+ background-color:hsl(71, 73%, 54%) ;
+ font-weight:600;
+ box-shadow:0 10px 20px 0  rgba(0, 0, 0, 0.221) ;
+
+}
+
+
+
+
+
+.why{
+    grid-area:why;
+    background-color:hsla(179, 62%, 43%, 0.721) ;
+    padding:35px;
+}
+.why h4{
+color:white;
+margin-bottom:15px;
+}
+.why p{
+    font-weight:400;
+    line-height:1.5;
+    color:hsla(0, 0%, 100%, 0.614)  ;
+    font-size:13px;
+}
+@media(max-width:600px){
+    .container{
+        grid-template-columns:repeat(1 ,300px) ;
+        grid-template-areas:"info" 
+                             "price"
+                               "why"    ;
+       
+                               
+    }
+}
